@@ -1,0 +1,8 @@
+main: de.luc1412.tp.TeamPanel
+name: TeamPanel
+version: 1.0
+author: Luc1412
+
+commands:
+     teampanel:
+          description: Open the Teampanel!

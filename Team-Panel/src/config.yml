@@ -1,0 +1,42 @@
+# ########################################
+# ########## THANK YOU FOR USING #########
+# ######## TEAM-PANEL BY LUC1412 #########
+# ########################################
+# ############# MAIN CONFIG ##############
+# ########################################
+
+
+# Set Your Time for the OpenAnimation. I recommend you a number between 1 and 10.
+OpenAnimation: 5
+
+Permissions:
+  Gamemode:
+    0: tp.gamemode.0
+    1: tp.gamemode.1
+    2: tp.gamemode.2
+    3: tp.gamemode.3
+  Server:
+    Stop: tp.server.stop
+    Reload: tp.server.restart
+    Restart: tp.server.restart
+  Player:
+    Heal: tp.player.heal
+    Kill: tp.player.kill
+    Fly: tp.player.fly
+    Vanish: tp.player.vanish
+    ClearInventory: tp.player.clear
+    ClearChat: tp.player.chat
+    Ip-Ban: tp.player.ip-bann
+    Ban: tp.player.bann
+    Kick: tp.player.kick
+  World:
+    SetTime: tp.world.setTime
+    ToggleMobSpawning: tp.world.mobspawn
+    SetWeather: tp.setWeather
+  Maintenance:
+    Use: tp.maintence
+    ByPass: tp.maintence.bypass
+
+
+
+
