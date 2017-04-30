@@ -1,7 +1,12 @@
 main: de.luc1412.tp.TeamPanel
 name: TeamPanel
-version: 1.0
+prefix: Teampanel
+version: 0.1.5
 author: Luc1412
+description: The Official Teampanel Plugin by Luc1412
+website: https://www.spigotmc.org/members/luc1412.243015/
+database: false
+softdepend: [ProtocolLib]
 
 commands:
      teampanel:

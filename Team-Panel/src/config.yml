@@ -9,6 +9,12 @@
 # Set Your Time for the OpenAnimation. I recommend you a number between 1 and 10.
 OpenAnimation: 5
 
+# Change to 1 if you want a Maintenance Server Icon. Please put a File named "maintenance-icon.png" in the plugin Directory.
+MaintenanceIcon: 0
+
+#Time in seconds how long the plugin must wait to start the Maintenance
+MaintenanceTime: 30
+
 Permissions:
   Gamemode:
     0: tp.gamemode.0

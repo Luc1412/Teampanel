@@ -1,11 +1,13 @@
 package de.luc1412.tp;
 
+import com.comphenix.protocol.ProtocolManager;
 import de.luc1412.tp.commands.CMDTeamPanel;
 import de.luc1412.tp.config.MessagesConfig;
 import de.luc1412.tp.config.SettingsConfig;
 import de.luc1412.tp.inventorys.Menu;
 import de.luc1412.tp.utils.ItemCreator;
 import de.luc1412.tp.utils.MaintenanceManager;
+import de.luc1412.tp.utils.Utils;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -21,6 +23,8 @@ public class TeamPanel extends JavaPlugin {
     private static ItemCreator itemCreator;
     private static MessagesConfig messagesConfig;
     private static SettingsConfig settingsConfig;
+    private static ProtocolManager protocolManager;
+    private static Utils utils;
     private static final String prefix = "§8|§1Team§8-§4Panel§8| §3->§r ";
 
     @Override
@@ -33,8 +37,12 @@ public class TeamPanel extends JavaPlugin {
     public void onEnable() {
         itemCreator = new ItemCreator();
         messagesConfig = new MessagesConfig();
+        settingsConfig = new SettingsConfig();
+        utils = new Utils();
 
 
+
+        this.getConfig().options().copyDefaults(true);
         saveDefaultConfig();
         try {
             messagesConfig.createConfig();
@@ -82,6 +90,14 @@ public class TeamPanel extends JavaPlugin {
 
     public static SettingsConfig getSettingsConfig() {
         return settingsConfig;
+    }
+
+    public static ProtocolManager getProtocolManager() {
+        return protocolManager;
+    }
+
+    public static Utils getUtils() {
+        return utils;
     }
 
     public static String getPrefix() {

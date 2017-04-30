@@ -13,7 +13,6 @@ import org.bukkit.entity.Player;
  */
 public class CMDTeamPanel implements CommandExecutor {
 
-    Menu menu;
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String lable, String[] args) {
         if(cmd.getName().equalsIgnoreCase("teampanel")){
@@ -22,7 +21,7 @@ public class CMDTeamPanel implements CommandExecutor {
                 if(p.hasPermission("teampanel.use")){
                     if(args.length > 0){
                     } else {
-                        menu = new Menu();
+                        Menu menu = new Menu();
                         menu.openMenu(p);
                     }
                 } else p.sendMessage(TeamPanel.getMessagesConfig().getString(Messages.NOPERMISSION));

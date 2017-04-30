@@ -1,7 +1,6 @@
 package de.luc1412.tp.inventorys;
 
 import de.luc1412.tp.TeamPanel;
-import de.luc1412.tp.utils.ItemCreator;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
@@ -45,7 +44,5 @@ public class PlayerChoice {
         } else {
             inv.setItem(max+2, new ItemStack(Material.IRON_FENCE, 1));
         }
-
-        return;
     }
 }

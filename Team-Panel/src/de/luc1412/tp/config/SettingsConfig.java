@@ -12,8 +12,8 @@ import java.io.IOException;
  */
 public class SettingsConfig {
 
-    File file = new File(TeamPanel.getInstance().getDataFolder() + "//settings.yml");
-    YamlConfiguration cfg = YamlConfiguration.loadConfiguration(file);
+    private File file = new File(TeamPanel.getInstance().getDataFolder() + "//settings.yml");
+    private YamlConfiguration cfg = YamlConfiguration.loadConfiguration(file);
 
     public void createConfig(){
         try {

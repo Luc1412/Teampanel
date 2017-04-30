@@ -11,8 +11,8 @@ import java.io.IOException;
  */
 public class MessagesConfig {
 
-    File file = new File(TeamPanel.getInstance().getDataFolder() + "//messages.yml");
-    YamlConfiguration cfg = YamlConfiguration.loadConfiguration(file);
+    private File file = new File(TeamPanel.getInstance().getDataFolder() + "//messages.yml");
+    private YamlConfiguration cfg = YamlConfiguration.loadConfiguration(file);
 
 
     public void createConfig() throws IOException {
@@ -85,6 +85,7 @@ public class MessagesConfig {
             cfg.set("MaintenanceSettings.MainItem", "&1Maintenance&8-&4Settings");
             cfg.set("MaintenanceSettings.Motd", "&4The Server is Currently in Maintenance");
             cfg.set("MaintenanceSettings.KickMessage", "&4The Server is Currently in Maintenance. Please try it later again.");
+            cfg.set("MaintenanceSettings.VersionName", "Maintenance");
 
             cfg.save(file);
         }
@@ -143,7 +144,7 @@ public class MessagesConfig {
         Player-Settings
          */
         else if(messages.equals(Messages.PLAYERSETTINGS)){
-            return cfg.getString("PlayerSettings").replaceAll("&", "§");
+            return cfg.getString("PlayerSettings.MainItem").replaceAll("&", "§");
         }else if(messages.equals(Messages.PLAYERSETTINGSITEMFLY)){
             return cfg.getString("PlayerSettings.Item.Fly").replaceAll("&", "§");
         }else if(messages.equals(Messages.PLAYERSETTINGSITEMHEAL)){
@@ -208,6 +209,8 @@ public class MessagesConfig {
             return cfg.getString("MaintenanceSettings.Motd").replaceAll("&", "§");
         } else if(messages.equals(Messages.MAINTENANCESETTINGSKICKMSG)){
             return cfg.getString("MaintenanceSettings.KickMessage").replaceAll("&", "§");
+        } else if(messages.equals(Messages.MAINTENANCESETTINGSVERSION)){
+            return cfg.getString("MaintenanceSettings.VersionName");
         }
         return null;
     }
